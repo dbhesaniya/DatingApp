@@ -42,8 +42,8 @@ namespace DatingApp.API.Controllers
         public async Task<IActionResult> Login(UserForLoginDto dto)
         {
             var userForRepo = await _repo.Login(dto.Username.ToLower(), dto.Password);
-            if (userForRepo == null)
-                return Unauthorized();
+            // if (userForRepo == null)
+            //     return Unauthorized();
 
             var claims = new[]
             {
